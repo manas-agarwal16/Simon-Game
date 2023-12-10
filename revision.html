@@ -1,0 +1,196 @@
+// for(var i = 1; i<=10;i++){
+    $(document).on("keypress",function(e){
+    
+    
+        for(var i = 1; i <= 1 ;i++){
+            $("h1").html("level" + i);
+            var random = Math.floor(Math.random() * 4) + 1;
+            // console.log(random);
+    
+            if( random === 1){
+                $(".g").css("visibility","hidden");
+                setTimeout(function(){
+                    $(".g").css("visibility","visible");
+                },100);
+    
+                $(".g").addClass("check");
+            }
+            else if(random === 2){
+                $(".r").css("visibility","hidden");
+                setTimeout(function(){
+                    $(".r").css("visibility","visible");
+                },100);
+    
+                $(".r").addClass("check");
+            }
+            else if(random === 3){
+                $(".y").css("visibility","hidden");
+                setTimeout(function(){
+                    $(".y").css("visibility","visible");
+                },100);
+    
+                $(".y").addClass("check");
+            }
+            else if(random === 4){
+                $(".r").css("visibility","hidden");
+    
+                setTimeout(function(){
+                    $(".r").css("visibility","visible");
+                },100);
+    
+                $(".r").addClass("check");
+            }
+    
+            userans();
+        }
+    });
+    
+    function userans(){
+        $(".target").on("click",function(){
+            
+        // console.log(this); do this if not getting. this keyword gives which trigger the function if green button got clicked then it gives  <div class="target g"> </div>
+    
+        var clickedButton = this.innerHTML;
+        makeSound(clickedButton);
+    
+        
+    
+        });
+    
+    function makeSound(clickedButton){
+        switch(clickedButton){
+            case "r" :{
+                $(".r").on("click",function(){
+                    $(".r").addClass("clicked");
+    
+                    setTimeout(function(){
+                        $(".r").removeClass("clicked");
+                    },100);
+                });
+    
+                var audio = new Audio("./blue.mp3");
+                audio.play();
+                break;
+            } 
+    
+            case "g" :{
+                $(".g").on("click",function(){
+                    $(".g").addClass("clicked");
+    
+                    setTimeout(function(){
+                        $(".g").removeClass("clicked");
+                    },100);
+                });
+    
+                var audio = new Audio("./green.mp3");
+                audio.play();
+                break;
+            } 
+    
+            case "b" :{
+                $(".b").on("click",function(){
+                    $(".b").addClass("clicked");
+    
+                    setTimeout(function(){
+                        $(".b").removeClass("clicked");
+                    },100);
+                });
+    
+                var audio = new Audio("./blue.mp3");
+                audio.play();
+                break;
+            } 
+    
+            case "y" :{
+                $(".y").on("click",function(){
+                    $(".y").addClass("clicked");
+    
+                    setTimeout(function(){
+                        $(".y").removeClass("clicked");
+                    },100);
+                });
+    
+                var audio = new Audio("./yellow.mp3");
+                audio.play();
+                break;
+            } 
+        }
+    }
+    
+    }
+    
+        
+    
+    // }
+    
+    // $(".target").on("click",function(){
+            
+    //     // console.log(this); do this if not getting. this keyword gives which trigger the function if green button got clicked then it gives  <div class="target g"> </div>
+    
+    //     var clickedButton = this.innerHTML;
+    //     makeSound(clickedButton);
+    // });
+    
+    // function makeSound(clickedButton){
+    //     switch(clickedButton){
+    //         case "r" :{
+    //             $(".r").on("click",function(){
+    //                 $(".r").addClass("clicked");
+    
+    //                 setTimeout(function(){
+    //                     $(".r").removeClass("clicked");
+    //                 },100);
+    //             });
+    
+    //             var audio = new Audio("./blue.mp3");
+    //             audio.play();
+    //             break;
+    //         } 
+    
+    //         case "g" :{
+    //             $(".g").on("click",function(){
+    //                 $(".g").addClass("clicked");
+    
+    //                 setTimeout(function(){
+    //                     $(".g").removeClass("clicked");
+    //                 },100);
+    //             });
+    
+    //             var audio = new Audio("./green.mp3");
+    //             audio.play();
+    //             break;
+    //         } 
+    
+    //         case "b" :{
+    //             $(".b").on("click",function(){
+    //                 $(".b").addClass("clicked");
+    
+    //                 setTimeout(function(){
+    //                     $(".b").removeClass("clicked");
+    //                 },100);
+    //             });
+    
+    //             var audio = new Audio("./blue.mp3");
+    //             audio.play();
+    //             break;
+    //         } 
+    
+    //         case "y" :{
+    //             $(".y").on("click",function(){
+    //                 $(".y").addClass("clicked");
+    
+    //                 setTimeout(function(){
+    //                     $(".y").removeClass("clicked");
+    //                 },100);
+    //             });
+    
+    //             var audio = new Audio("./yellow.mp3");
+    //             audio.play();
+    //             break;
+    //         } 
+    //     }
+    // }
+    
+    
+    
+    

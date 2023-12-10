@@ -1,0 +1,59 @@
+body{
+    background-color: #011F3F;
+    color: rgb(232, 232, 200);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h1{
+    font-size: 5rem;
+    text-align: center;
+    /* border: 1px solid white; */
+}
+.box1 , .box2{
+    display: flex;
+    width: 25rem;
+    height: 10rem;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+}
+.target{
+    cursor: pointer;
+}
+.box1 div{
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+}
+.box1 div , .box2 div{
+    /* border: 1px solid white; */
+    height: 150px;
+    width: 150px;
+    border-radius: 25px;
+    border: 6px solid black;
+}
+#green{
+    background-color: green;
+    color: green;
+}
+#blue{
+    background-color: blue;
+    color: blue;
+}
+#yellow{
+    background-color: yellow;
+    color: yellow;
+}
+#red
+{
+    background-color: red;
+    color: red;
+}
+
+.clicked{
+    background-color: gray;
+    box-shadow: 0px 0px 3px 3px gray;
+}
+
+.gameOver{
+    background-color: red;
+}
+
